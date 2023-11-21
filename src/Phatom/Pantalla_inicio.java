@@ -71,6 +71,14 @@ public class Pantalla_inicio {
 		frmPantallainicio.getContentPane().add(lblNike);
 		
 		cmbNike = new JComboBox();
+		cmbNike.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int op=cmbNike.getSelectedIndex();
+				if(op==0) {
+					
+				}
+			}
+		});
 		cmbNike.setModel(new DefaultComboBoxModel(new String[] {"Air max", "Air force", "Air mag", "Nike dunke"}));
 		cmbNike.setBounds(75, 154, 110, 22);
 		frmPantallainicio.getContentPane().add(cmbNike);
