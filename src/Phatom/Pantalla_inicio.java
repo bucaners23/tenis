@@ -30,6 +30,7 @@ public class Pantalla_inicio {
 	private JLabel lblNewLabel_2;
 	private JLabel lblNewLabel_4;
 	private JLabel lblNewLabel_5;
+	private JLabel lblNewLabel_6;
 
 	
 	public static void main(String[] args) {
@@ -45,40 +46,53 @@ public class Pantalla_inicio {
 	private void initialize() {
 		frmPantallainicio = new JFrame();
 		frmPantallainicio.setTitle("Pantalla Inicio");
-		frmPantallainicio.setBounds(100, 100, 924, 483);
+		frmPantallainicio.setBounds(100, 100, 924, 561);
 		frmPantallainicio.setLocationRelativeTo(null);
 		frmPantallainicio.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmPantallainicio.getContentPane().setLayout(null);
 	
+		JLabel lblNewLabel_7_1_1 = new JLabel("ADIDAS FORUM MID \"OFF-WHITE\"");
+		lblNewLabel_7_1_1.setFont(new Font("Century Gothic", Font.BOLD, 15));
+		lblNewLabel_7_1_1.setBounds(611, 317, 259, 116);
+		frmPantallainicio.getContentPane().add(lblNewLabel_7_1_1);
 		
-		lblNike = new JLabel("");
-		lblNike.setIcon(new ImageIcon(Pantalla_inicio.class.getResource("/Phatom/pngwing.com (3).png")));
-		lblNike.setBounds(10, 87, 110, 52);
+		JLabel lblNewLabel_7_1_1_1 = new JLabel("JORDAN 1 \"RED TOE\"");
+		lblNewLabel_7_1_1_1.setFont(new Font("Century Gothic", Font.BOLD, 15));
+		lblNewLabel_7_1_1_1.setBounds(21, 317, 259, 116);
+		frmPantallainicio.getContentPane().add(lblNewLabel_7_1_1_1);
+		
+		JLabel lblNewLabel_7_1_1_2 = new JLabel("JORDAN 4 \"BLACK CANVAS\"");
+		lblNewLabel_7_1_1_2.setFont(new Font("Century Gothic", Font.BOLD, 15));
+		lblNewLabel_7_1_1_2.setBounds(290, 317, 259, 116);
+		frmPantallainicio.getContentPane().add(lblNewLabel_7_1_1_2);
+		
+		lblNike = new JLabel("xx");
+		lblNike.setBounds(831, 110, 110, 52);
 		frmPantallainicio.getContentPane().add(lblNike);
 		
 		cmbNike = new JComboBox();
 		cmbNike.setModel(new DefaultComboBoxModel(new String[] {"Air max", "Air force", "Air mag", "Nike dunke"}));
-		cmbNike.setBounds(10, 150, 110, 22);
+		cmbNike.setBounds(75, 154, 110, 22);
 		frmPantallainicio.getContentPane().add(cmbNike);
 		
 		lblAdidas = new JLabel("");
 		lblAdidas.setIcon(new ImageIcon(Pantalla_inicio.class.getResource("/Phatom/adidas.png")));
-		lblAdidas.setBounds(10, 183, 110, 52);
+		lblAdidas.setBounds(21, 69, 110, 52);
 		frmPantallainicio.getContentPane().add(lblAdidas);
 		
 		cmbAdidas = new JComboBox();
 		cmbAdidas.setModel(new DefaultComboBoxModel(new String[] {"Forum", "Adi2000", "Superstar", "Tensaur"}));
-		cmbAdidas.setBounds(10, 246, 110, 22);
+		cmbAdidas.setBounds(688, 162, 110, 22);
 		frmPantallainicio.getContentPane().add(cmbAdidas);
 		
 		lblAdidas_1 = new JLabel("");
 		lblAdidas_1.setIcon(new ImageIcon(Pantalla_inicio.class.getResource("/Phatom/jumpand.png")));
-		lblAdidas_1.setBounds(10, 279, 110, 70);
+		lblAdidas_1.setBounds(238, 69, 110, 70);
 		frmPantallainicio.getContentPane().add(lblAdidas_1);
 		
 		cmbAdidas_1 = new JComboBox();
 		cmbAdidas_1.setModel(new DefaultComboBoxModel(new String[] {"Jordan 1", "Jordan 4", "Jordan 1 Travis", "Jordan 11"}));
-		cmbAdidas_1.setBounds(10, 360, 110, 22);
+		cmbAdidas_1.setBounds(368, 154, 110, 22);
 		
 		frmPantallainicio.getContentPane().add(cmbAdidas_1);
 		
@@ -112,6 +126,23 @@ public class Pantalla_inicio {
 		lblNewLabel_5 = new JLabel("P r e c i o :");
 		lblNewLabel_5.setBounds(178, 85, 87, 22);
 		frmPantallainicio.getContentPane().add(lblNewLabel_5);
+		
+		lblNewLabel_6 = new JLabel("");
+		lblNewLabel_6.setIcon(new ImageIcon(Pantalla_inicio.class.getResource("/Phatom/Jordan1.jpg")));
+		lblNewLabel_6.setBounds(21, 208, 220, 141);
+		frmPantallainicio.getContentPane().add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_6_1 = new JLabel("New label");
+		lblNewLabel_6_1.setIcon(new ImageIcon(Pantalla_inicio.class.getResource("/Phatom/Jordan4.jpg")));
+		lblNewLabel_6_1.setBounds(311, 208, 225, 141);
+		frmPantallainicio.getContentPane().add(lblNewLabel_6_1);
+		
+		JLabel lblNewLabel_6_2 = new JLabel("");
+		lblNewLabel_6_2.setIcon(new ImageIcon(Pantalla_inicio.class.getResource("/Phatom/Adidasf (1).jpg")));
+		lblNewLabel_6_2.setBounds(601, 195, 239, 141);
+		frmPantallainicio.getContentPane().add(lblNewLabel_6_2);
+		
+		
 
 		
 		
