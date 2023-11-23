@@ -15,6 +15,9 @@ import javax.swing.JTextArea;
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.Image;
+import javax.swing.JList;
+import javax.swing.AbstractListModel;
+import java.awt.Toolkit;
 
 public class Pantalla_inicio {
 
@@ -24,7 +27,7 @@ public class Pantalla_inicio {
 	private JLabel lblAdidas;
 	private JComboBox cmbColor;
 	private JLabel lblAdidas_1;
-	private JComboBox cmbModelo;
+	private JComboBox<?> cmbModelo;
 	private JLabel lblNewLabel;
 	private JLabel lblNewLabel_3;
 	private JLabel lblNewLabel_1;
@@ -36,6 +39,8 @@ public class Pantalla_inicio {
 	private JLabel lblIma2;
 	private JLabel lblIma3;
 
+
+
 	public static void main(String[] args) {
 		Pantalla_inicio x = new Pantalla_inicio();
 		x.frmPantallainicio.setVisible(true);
@@ -46,14 +51,14 @@ public class Pantalla_inicio {
 	}
 
 	public ImageIcon cambiar(ImageIcon img, int ancho, int alto) {
-        Image imgEscalada = img.getImage().getScaledInstance(ancho,
-                alto, Image.SCALE_SMOOTH);
-        ImageIcon image = new ImageIcon(imgEscalada);
-        return image;
-    }
-	
+		Image imgEscalada = img.getImage().getScaledInstance(ancho, alto, Image.SCALE_SMOOTH);
+		ImageIcon image = new ImageIcon(imgEscalada);
+		return image;
+	}
+
 	private void initialize() {
 		frmPantallainicio = new JFrame();
+		frmPantallainicio.setIconImage(Toolkit.getDefaultToolkit().getImage(Pantalla_inicio.class.getResource("/Phatom/Captura de pantalla (12)-fotor-bg-remover-202311149454 (1).png")));
 		frmPantallainicio.setTitle("Pantalla Inicio");
 		frmPantallainicio.setBounds(100, 100, 924, 561);
 		frmPantallainicio.setLocationRelativeTo(null);
@@ -62,17 +67,17 @@ public class Pantalla_inicio {
 
 		JLabel lblNewLabel_7_1_1 = new JLabel("ADIDAS FORUM MID \"OFF-WHITE\"");
 		lblNewLabel_7_1_1.setFont(new Font("Century Gothic", Font.BOLD, 15));
-		lblNewLabel_7_1_1.setBounds(611, 317, 259, 116);
+		lblNewLabel_7_1_1.setBounds(611, 335, 259, 116);
 		frmPantallainicio.getContentPane().add(lblNewLabel_7_1_1);
 
 		JLabel lblNewLabel_7_1_1_1 = new JLabel("JORDAN 1 \"RED TOE\"");
 		lblNewLabel_7_1_1_1.setFont(new Font("Century Gothic", Font.BOLD, 15));
-		lblNewLabel_7_1_1_1.setBounds(21, 317, 259, 116);
+		lblNewLabel_7_1_1_1.setBounds(21, 335, 259, 116);
 		frmPantallainicio.getContentPane().add(lblNewLabel_7_1_1_1);
 
 		lblNewLabel_7_1_1_2 = new JLabel("JORDAN 4 \"BLACK CANVAS\"");
 		lblNewLabel_7_1_1_2.setFont(new Font("Century Gothic", Font.BOLD, 15));
-		lblNewLabel_7_1_1_2.setBounds(290, 317, 259, 116);
+		lblNewLabel_7_1_1_2.setBounds(300, 335, 259, 116);
 		frmPantallainicio.getContentPane().add(lblNewLabel_7_1_1_2);
 
 		lblNike = new JLabel("xx");
@@ -83,33 +88,38 @@ public class Pantalla_inicio {
 		cmbMara.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int op = cmbMara.getSelectedIndex();
+
 				if (op == 0) {
-					cmbModelo.setModel(
-							new DefaultComboBoxModel(new String[] {"Air force", "Air max 90", "Air mag", "Legacy", "Nike cortez", "Nike Bleazer", "Air msx 95"}));
-					lblIma2.setIcon(cambiar(new ImageIcon(getClass().getResource("/Phatom/A90.jpg")), 290, 190));
+					cmbModelo.setModel(new DefaultComboBoxModel(new String[] { "Air force", "Air max 90", "Air mag",
+							"Legacy", "Nike cortez", "Nike Bleazer", "Air msx 95" }));
+					
+					
 
 				}
 				if (op == 1) {
-					cmbModelo.setModel(new DefaultComboBoxModel(new String[] {"Forum", "Concha", "Adi2000", "Yeazzy", "Superstar", "Adidas NMD", "Adidas Falco", "ZX 2K BOOST"}));
+					cmbModelo.setModel(new DefaultComboBoxModel(new String[] { "Forum", "Concha", "Adi2000", "Yeazzy",
+
+							"Superstar", "Adidas NMD", "Adidas Falco", "ZX 2K BOOST" }));
 
 				}
 				if (op == 2) {
-					cmbModelo.setModel(new DefaultComboBoxModel(new String[] {"Jordan 1", "Jordan 3", "Jordan 10", "Jordan 11", "Jordan 12", "Jordan 1 Travis Scott"}));
+					cmbModelo.setModel(new DefaultComboBoxModel(new String[] { "Jordan 1", "Jordan 3", "Jordan 10",
+							"Jordan 11", "Jordan 12", "Jordan 1 Travis Scott" }));
 
 				}
 			}
 		});
-		cmbMara.setModel(new DefaultComboBoxModel(new String[] {"Nike", "Adidas", "Jordan", "New Balance"}));
-		cmbMara.setBounds(75, 154, 110, 22);
+		cmbMara.setModel(new DefaultComboBoxModel(new String[] { "Nike", "Adidas", "Jordan", "New Balance" }));
+		cmbMara.setBounds(75, 154, 157, 22);
 		frmPantallainicio.getContentPane().add(cmbMara);
 
 		lblAdidas = new JLabel("");
 		lblAdidas.setIcon(new ImageIcon(Pantalla_inicio.class.getResource("/Phatom/adidas.png")));
-		lblAdidas.setBounds(21, 69, 110, 52);
+		lblAdidas.setBounds(427, 85, 110, 52);
 		frmPantallainicio.getContentPane().add(lblAdidas);
 
 		cmbColor = new JComboBox();
-		cmbColor.setBounds(688, 162, 110, 22);
+		cmbColor.setBounds(641, 162, 157, 22);
 		frmPantallainicio.getContentPane().add(cmbColor);
 
 		lblAdidas_1 = new JLabel("");
@@ -118,7 +128,27 @@ public class Pantalla_inicio {
 		frmPantallainicio.getContentPane().add(lblAdidas_1);
 
 		cmbModelo = new JComboBox();
-		cmbModelo.setBounds(368, 154, 110, 22);
+		cmbModelo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int z = cmbModelo.getSelectedIndex();
+				if (z == 0) {
+					lblIma1.setIcon(cambiar(new ImageIcon(getClass().getResource("/Phatom/AA1.jpg")), 290, 350));
+					lblIma2.setIcon(cambiar(new ImageIcon(getClass().getResource("/Phatom/AIR1.jpg")), 290, 320));
+					lblIma3.setIcon(cambiar(new ImageIcon(getClass().getResource("/Phatom/AI.jpg")), 290, 310));
+				}
+				if (z == 1) {
+					lblIma1.setIcon(cambiar(new ImageIcon(getClass().getResource("/Phatom/A90.jpg")), 290, 210));
+					lblIma2.setIcon(cambiar(new ImageIcon(getClass().getResource("/Phatom/a901.jpg")), 290, 210));
+					lblIma3.setIcon(cambiar(new ImageIcon(getClass().getResource("/Phatom/90.jpg")), 300, 320));
+				}
+				if (z == 2) {
+					lblIma1.setIcon(cambiar(new ImageIcon(getClass().getResource("/Phatom/A90.jpg")), 290, 350));
+					lblIma2.setIcon(cambiar(new ImageIcon(getClass().getResource("/Phatom/a901.jpg")), 290, 320));
+					lblIma3.setIcon(cambiar(new ImageIcon(getClass().getResource("/Phatom/90.jpg")), 290, 310));
+			}
+			}
+		});
+		cmbModelo.setBounds(368, 154, 151, 22);
 		frmPantallainicio.getContentPane().add(cmbModelo);
 
 		lblNewLabel_4 = new JLabel("S N E A K E R S   P H A T O M");
@@ -152,18 +182,23 @@ public class Pantalla_inicio {
 
 		lblIma1 = new JLabel("");
 		lblIma1.setIcon(new ImageIcon(Pantalla_inicio.class.getResource("/Phatom/Jordan1.jpg")));
-		lblIma1.setBounds(21, 208, 244, 141);
+		lblIma1.setBounds(21, 208, 259, 166);
 		frmPantallainicio.getContentPane().add(lblIma1);
 
 		lblIma2 = new JLabel("");
 		lblIma2.setIcon(new ImageIcon(Pantalla_inicio.class.getResource("/Phatom/Jordan4.jpg")));
-		lblIma2.setBounds(290, 208, 269, 141);
+		lblIma2.setBounds(290, 208, 301, 171);
 		frmPantallainicio.getContentPane().add(lblIma2);
 
 		lblIma3 = new JLabel("");
 		lblIma3.setIcon(new ImageIcon(Pantalla_inicio.class.getResource("/Phatom/Adidasf (1).jpg")));
-		lblIma3.setBounds(601, 195, 239, 141);
+		lblIma3.setBounds(590, 195, 280, 179);
 		frmPantallainicio.getContentPane().add(lblIma3);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"menu"}));
+		comboBox.setBounds(21, 22, 68, 22);
+		frmPantallainicio.getContentPane().add(comboBox);
 
 	}
 }
