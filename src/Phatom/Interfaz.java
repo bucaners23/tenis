@@ -17,6 +17,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.border.MatteBorder;
 import javax.swing.SwingConstants;
+import javax.swing.border.CompoundBorder;
 
 public class Interfaz {
 
