@@ -75,6 +75,8 @@ public class Pantalla_inicio {
 	private JButton btnNewButton_17;
 	private JButton btnNewButton_18;
 	private JButton btnNewButton_19;
+	
+
 
 	public static void main(String[] args) {
 		Pantalla_inicio x = new Pantalla_inicio();
@@ -90,6 +92,8 @@ public class Pantalla_inicio {
 		ImageIcon image = new ImageIcon(imgEscalada);
 		return image;
 	}
+	
+	
 
 	private void initialize() {
 		frmPantallainicio = new JFrame();
@@ -147,7 +151,7 @@ public class Pantalla_inicio {
 		lblNikeJordanLegacy.setBounds(1192, 529, 259, 58);
 		frmPantallainicio.getContentPane().add(lblNikeJordanLegacy);
 
-		lblTeni1 = new JLabel("JORDAN 1 \"RED TOE\"");
+		lblTeni1 = new JLabel("JORDAN 1 \"re MO LEON\"");
 		lblTeni1.setFont(new Font("Century Gothic", Font.BOLD, 15));
 		lblTeni1.setBounds(67, 253, 259, 52);
 		frmPantallainicio.getContentPane().add(lblTeni1);
@@ -211,7 +215,7 @@ public class Pantalla_inicio {
 		lblNikeLegacy.setBounds(57, 535, 259, 52);
 		frmPantallainicio.getContentPane().add(lblNikeLegacy);
 
-		lblImaggeb = new JLabel("NIKE AIR MAX 90");
+		lblImaggeb = new JLabel("NIKE AIR MAX 90 te amo un chingo leon ");
 		lblImaggeb.setFont(new Font("Century Gothic", Font.BOLD, 15));
 		lblImaggeb.setBounds(336, 530, 259, 52);
 		frmPantallainicio.getContentPane().add(lblImaggeb);
@@ -224,6 +228,9 @@ public class Pantalla_inicio {
 		BtnComprar = new JButton("Comprar");
 		BtnComprar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				ticks xdd=new ticks();
+				xdd.frmTicks.setVisible(true);
+
 			}
 		});
 		BtnComprar.setBounds(43, 313, 99, 23);
@@ -240,6 +247,8 @@ public class Pantalla_inicio {
 		btnNewButton_2 = new JButton("Comprar");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				ticks xdd=new ticks();
+				xdd.frmTicks.setVisible(true);
 			}
 		});
 		btnNewButton_2.setBounds(346, 313, 99, 23);
@@ -248,6 +257,8 @@ public class Pantalla_inicio {
 		btnNewButton_3 = new JButton("Comprar");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				ticks xdd=new ticks();
+				xdd.frmTicks.setVisible(true);
 			}
 		});
 		btnNewButton_3.setBounds(616, 313, 99, 23);
@@ -256,6 +267,8 @@ public class Pantalla_inicio {
 		btnNewButton_4 = new JButton("Comprar");
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				ticks xdd=new ticks();
+				xdd.frmTicks.setVisible(true);
 			}
 		});
 		btnNewButton_4.setBounds(907, 309, 99, 23);
@@ -264,6 +277,8 @@ public class Pantalla_inicio {
 		btnNewButton_5 = new JButton("Comprar");
 		btnNewButton_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				ticks xdd=new ticks();
+				xdd.frmTicks.setVisible(true);
 			}
 		});
 		btnNewButton_5.setBounds(1188, 309, 99, 23);
@@ -304,6 +319,8 @@ public class Pantalla_inicio {
 		btnNewButton_10 = new JButton("Comprar");
 		btnNewButton_10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				ticks xdd=new ticks();
+				xdd.frmTicks.setVisible(true);
 			}
 		});
 		btnNewButton_10.setBounds(46, 585, 99, 23);
@@ -312,6 +329,8 @@ public class Pantalla_inicio {
 		btnNewButton_11 = new JButton("Comprar");
 		btnNewButton_11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				ticks xdd=new ticks();
+				xdd.frmTicks.setVisible(true);
 			}
 		});
 		btnNewButton_11.setBounds(331, 585, 99, 23);
@@ -320,6 +339,8 @@ public class Pantalla_inicio {
 		btnNewButton_12 = new JButton("Comprar");
 		btnNewButton_12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				ticks xdd=new ticks();
+				xdd.frmTicks.setVisible(true);
 			}
 		});
 		btnNewButton_12.setBounds(616, 585, 99, 23);
@@ -328,6 +349,8 @@ public class Pantalla_inicio {
 		btnNewButton_13 = new JButton("Comprar");
 		btnNewButton_13.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				ticks xdd=new ticks();
+				xdd.frmTicks.setVisible(true);
 			}
 		});
 		btnNewButton_13.setBounds(895, 585, 99, 23);
@@ -336,6 +359,8 @@ public class Pantalla_inicio {
 		btnNewButton_14 = new JButton("Comprar");
 		btnNewButton_14.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				ticks xdd=new ticks();
+				xdd.frmTicks.setVisible(true);
 			}
 		});
 		btnNewButton_14.setBounds(1202, 585, 99, 23);
@@ -397,5 +422,6 @@ public class Pantalla_inicio {
 		mnNewMenu_3 = new JMenu("Usuario");
 		menuBar.add(mnNewMenu_3);
 
+		
 	}
 }

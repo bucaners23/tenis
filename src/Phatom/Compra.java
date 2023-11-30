@@ -1,26 +1,15 @@
 package Phatom;
 
-public class Comprar_data {
-	int idsu;
+public class Compra {
+	int idusu;
 	int idcompra;
 	String nombre;
 	String correo;
 	String telefono;
 	String fecha;
-	Comprar dc=new Comprar();
-	public Comprar_data() {
+	DataCompra dc=new DataCompra();
+	public Compra() {
 	}
-	public Comprar_data(int idsu, int idcompra, String nombre, String correo, String telefono, 
-			String fecha) {
-		super();
-		this.idsu = idsu;
-		this.idcompra = idcompra;
-		this.nombre = nombre;
-		this.correo = correo;
-		this.telefono = telefono;
-		this.fecha = fecha;
-	}
-	
 	public boolean insertar() {
 		if (dc.insertar(this)) {
 			return true;
@@ -29,11 +18,21 @@ public class Comprar_data {
 		}
 	}
 	
-	public int getIdsu() {
-		return idsu;
+	public Compra(int idusu, int idcompra, String nombre, String correo, String telefono, String fecha) {
+		super();
+		this.idusu = idusu;
+		this.idcompra = idcompra;
+		this.nombre = nombre;
+		this.correo = correo;
+		this.telefono = telefono;
+		this.fecha = fecha;
 	}
-	public void setIdsu(int idsu) {
-		this.idsu = idsu;
+
+	public int getIdusu() {
+		return idusu;
+	}
+	public void setIdusu(int idusu) {
+		this.idusu = idusu;
 	}
 	public int getIdcompra() {
 		return idcompra;
@@ -59,7 +58,6 @@ public class Comprar_data {
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
-	
 	public String getFecha() {
 		return fecha;
 	}

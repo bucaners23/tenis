@@ -12,7 +12,7 @@ public class Comprar {
 	}
 	public Connection conectar() {
 		try {
-			cx = DriverManager.getConnection("jdbc:mysql://localhost:3306/redes_sociales", "root", "");
+			cx = DriverManager.getConnection("jdbc:mysql://localhost:3306/proyect", "root", "");
 			System.out.println("CONEXION EXITOSA");
 		} catch (SQLException e) {
 			System.out.println("FALLO DE CONEXION");
@@ -23,12 +23,12 @@ public class Comprar {
 	public boolean insertar(Comprar_data u) {
 		PreparedStatement ps;
 		try {
-			ps=conectar().prepareStatement("INSERT INTO DataUsuario VALUES(null,null,?,?,?,?)");
-			ps.setString(0,u.getNombre());
-			ps.setString(1,u.getCorreo());
-			ps.setString(2,u.getTelefono());
-			ps.setString(3,u.getPrecio());
-			ps.setString(4,u.getFecha());
+			ps=conectar().prepareStatement("INSERT INTO compra VALUES(null,?,?,?,?,?)");
+			ps.setInt(1, u.getIdsu());
+			ps.setString(2,u.getNombre());
+			ps.setString(3,u.getCorreo());
+			ps.setString(4,u.getTelefono());
+			ps.setString(5,u.getFecha());
 			ps.execute();
 			return true;
 		}catch(SQLException e) {
